@@ -5,9 +5,6 @@
   padding-top: 60px;
 
   & .container {
-    text-align: left;
-    display: flex;
-    align-items: baseline;
   }
 }
 .adres__item:not(:last-child) {
@@ -19,7 +16,6 @@
   font-weight: 400;
 }
 .container-adres {
-  margin-right: 70px;
 }
 .footer-form {
   margin-left: auto;
@@ -46,11 +42,7 @@
   text-transform: uppercase;
   color: $color-main;
   display: block;
-  margin-bottom: 20px;
 }
 .icon-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   list-style: none;
 }

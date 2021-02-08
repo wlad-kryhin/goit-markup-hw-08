@@ -1,6 +1,7 @@
 .page-header {
   background-color: $color-main;
   position: relative;
+  border-bottom: 2px solid #ececec17;
 }
 .navigation {
   display: flex;
@@ -13,6 +14,12 @@
   border: none;
   display: inline-flex;
   background-color: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-mobile__icon {
+  margin: 10px 0;
 }
 .menu-mobile .menu-mobile__close {
   display: none;
@@ -29,9 +36,10 @@
   left: 0;
   background-color: $color-main;
   height: 390px;
+  width: 100%;
 
   display: none;
-  z-index: 5;
+  text-align: center;
 
   &.is-open {
     display: block;
@@ -44,6 +52,8 @@
   font-size: 14px;
   line-height: 1.2;
   transition: color $time-hover $cubic-for-all;
+  display: inline-flex;
+  margin-bottom: 20px;
 
   &:focus,
   &:hover {
@@ -55,6 +65,8 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
+  display: inline-flex;
+  margin-bottom: 20px;
 
   &:hover,
   &:focus {

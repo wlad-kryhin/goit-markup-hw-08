@@ -1,19 +1,11 @@
 .partners {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .partners__item {
-  display: inline-block;
-  display: flex;
-  justify-content: center;
-
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
 .partners__list {
-  list-style: none;
-  display: flex;
 }
 .partners__link {
   align-items: center;
