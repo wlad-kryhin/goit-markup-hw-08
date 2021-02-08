@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="bussiness" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Эффективные решения для вашего бизнеса</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -18,6 +18,18 @@
         <div class="container">
             <nav class="navigation">
                 <a href="./index.html" class="logo">Web<span class="logo__themelabel">Studio</span></a>
+                <button class="menu-mobile" 
+                type="button" 
+                artia-controls="header-menu-container" 
+                aria-expanded="false" 
+                data-menu-button>
+                    <svg class="menu-mobile__icon" width="40" height="40" 
+                    aria-label="Переключатель мобильного меню" >
+                        <use class="menu-mobile__menu" href="../img/symbol-defs.svg#menu"></use>
+                        <use class="menu-mobile__close" href="../img/symbol-defs.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="header-menu-container" id="header-menu-container" data-menu>
                 <ul class="navigation__list">
                     <li class="navigation__item">
                         <a href="./index.html" class="navigation__link navigation__link--accent">Студия</a>
@@ -29,7 +41,6 @@
                         <a href="/" class="navigation__link">Контакты</a>
                     </li>
                 </ul>
-            </nav>
             <ul class="contact">
                 <li class="contact__item"><a href="maito:info@devstudio.com" class="contact__link">
                         <svg class="contact__icon" width="16" height="12">
@@ -40,8 +51,11 @@
                         <svg class="contact__icon" width="10" height="16">
                             <use href="./img/symbol-defs.svg#smartphone"></use>
                         </svg>+380 96 111 11 11</a>
-                </li>
+                    </li>
             </ul>
+            </div>
+                </nav>
+
         </div>
     </header>
 
@@ -450,6 +464,7 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
 
 </body>

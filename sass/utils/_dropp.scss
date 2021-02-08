@@ -31,10 +31,11 @@ img {
   display: block;
 }
 .container {
-  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-  text-align: center;
+  @media screen and (max-width: 766px) {
+    width: 480px;
+  }
 }
 .visually-hidden {
   position: absolute !important;
