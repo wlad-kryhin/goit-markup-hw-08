@@ -1,0 +1,79 @@
+.page-header {
+  background-color: $color-main;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation__link {
+  color: $color-title;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  display: block;
+  transition: color $time-hover $cubic-for-all;
+
+  &:focus,
+  &:hover {
+    color: $color-accent;
+  }
+}
+.contact__link {
+  color: $color-text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+.navigation__list {
+  display: flex;
+}
+.navigation__item:not(:last-child),
+.contact__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.navigation__link--accent {
+  color: $color-accent;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $color-accent;
+    border-radius: 2px;
+  }
+}
+.contact__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
