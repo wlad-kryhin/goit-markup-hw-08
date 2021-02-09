@@ -1,18 +1,21 @@
 .about {
+  padding: 50px 0;
 }
 
 .about__list {
 }
 .about__item {
   &:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 .about__subtitle {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-
+  text-align: center;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .about__text {
   color: $color-text;
@@ -23,9 +26,12 @@
 }
 .about__icon--container {
   background-color: $color-background;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 120px;
+  margin-bottom: 20px;
 }
 .about__icon {
   height: 70px;
