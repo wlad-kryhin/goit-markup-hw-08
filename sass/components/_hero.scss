@@ -12,14 +12,16 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-top: 2px solid #ececec;
+  padding: 118px 0;
 }
 .hero__title {
   color: $color-main;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.5;
+  font-size: 26px;
+  line-height: 1.615;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
 
   margin-bottom: 30px;
 }
