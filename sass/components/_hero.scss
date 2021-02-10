@@ -2,18 +2,30 @@
 .hero {
   background-color: $color-footer;
   text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  max-width: 1600px;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../img/hero-img.jpg");
-  background-attachment: scroll;
+    url("../../img/imghero1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-top: 2px solid #ececec;
-  padding: 118px 0;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../../img/imghero2x.jpg");
+  }
 }
+
 .hero__title {
   color: $color-main;
   font-weight: 900;

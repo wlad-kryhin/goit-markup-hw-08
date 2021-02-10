@@ -17,7 +17,14 @@
     <header class="page-header">
         <div class="container">
             <nav class="navigation">
-                <a href="./index.html" class="logo">Web<span class="logo__themelabel">Studio</span></a>
+            <a href="./index.html" class="logo">Web<span class="logo__themelabel">Studio</span></a>
+            <button class="menu-mobile" type="button" artia-controls="header-menu-container" aria-expanded="false" data-menu-button>
+                <svg class="menu-mobile__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="menu-mobile__menu" href="../img/symbol-defs.svg#menu"></use>
+                    <use class="menu-mobile__close" href="../img/symbol-defs.svg#close"></use>
+                </svg>
+            </button>
+            <div class="header-menu-container" id="header-menu-container" data-menu>
                 <ul class="navigation__list">
                     <li class="navigation__item">
                         <a href="./index.html" class="navigation__link">Студия</a>
@@ -29,27 +36,46 @@
                         <a href="/" class="navigation__link">Контакты</a>
                     </li>
                 </ul>
+                <ul class="contact">
+                    <li class="contact__item"><a href="maito:info@devstudio.com" class="contact__link">
+                            <svg class="contact__icon" width="16" height="12">
+                                <use href="./img/symbol-defs.svg#ienvelope"></use>
+                            </svg>info@devstudio.com</a>
+                    </li>
+                    <li class="contact__item"><a href="tell:+380961111111" class="contact__link contact__link--accent">
+                            <svg class="contact__icon" width="10" height="16">
+                                <use href="./img/symbol-defs.svg#smartphone"></use>
+                            </svg>+380 96 111 11 11</a>
+                    </li>
+                </ul>
+                <ul class="social-list__menu">
+                    <li class="social-list__item">
+                        <a href="" class="social-list__links">Instagram</a>
+                        <span class="social-list__line"></span>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="" class="social-list__links">Twitter</a>
+                        <span class="social-list__line"></span>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="" class="social-list__links">Facebook</a>
+                        <span class="social-list__line"></span>
+                    </li>
+                    <li class="social-list__item">
+                        <a href="" class="social-list__links">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
             </nav>
-            <ul class="contact">
-                <li class="contact__item"><a href="maito:info@devstudio.com" class="contact__link">
-                        <svg class="contact__icon" width="16" height="12">
-                            <use href="./img/symbol-defs.svg#ienvelope"></use>
-                        </svg>info@devstudio.com</a>
-                </li>
-                <li class="contact__item"><a href="tell:+380961111111" class="contact__link">
-                        <svg class="contact__icon" width="10" height="16">
-                            <use href="./img/symbol-defs.svg#smartphone"></use>
-                        </svg>+380 96 111 11 11</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+            
+            </div>
+            </header>
 <!-- ХИРО-->
 <main>
     <section class="portfolio-selection">
         <div class="container">
             <h1 class="visually-hidden">portfolio</h1>
-            <ul class="text-decoration bits">
+            <ul class="bits">
                 <li class="list-buttons">
                     <button type="button" class="modal-buttons active">Все</button>
                 </li>
@@ -67,7 +93,7 @@
                 </li>
             </ul>
             <h2 class="visually-hidden">картинки Портфолио</h2>
-            <ul class="text-decoration portfolio-picture">
+            <ul class="portfolio-picture">
                 <li class="link-group">
                     <a href="#" class="links">
                         <div class="portfolio-effect">
@@ -192,7 +218,7 @@
                 <li class="link-group">
                     <a href="#" class="links">
                         <div class="portfolio-effect">
-                            <img class="link-gro-img" src="./images/Boxes.jpg" alt="boxes" width="370" height="294">
+                            <img class="link-group-img" src="./images/Boxes.jpg" alt="boxes" width="370" height="294">
                             <p class="description-technoryak"> Технокряк это современная площадка распространения
                                 коронавируса. Компании используют
                                 эту платформу для цифрового
@@ -206,7 +232,7 @@
                 </li>
             </ul>
         </div>
-        </selection>
+        </section>
 </main>
 
 <!-- FOOTER -->
@@ -276,7 +302,7 @@
 </footer>
 
 <script src="./js/modal.js"></script>
-<script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
 
 
 </body>

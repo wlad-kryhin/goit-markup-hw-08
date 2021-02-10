@@ -4,6 +4,11 @@
 }
 
 .about__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .about__item {
@@ -11,14 +16,20 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+    margin: 15px;
+  }
 }
 .about__subtitle {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.142;
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 10px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .about__text {
   color: $color-text;

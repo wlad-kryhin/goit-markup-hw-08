@@ -3,7 +3,6 @@
 }
 .navigation {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 .menu-mobile {
@@ -37,24 +36,149 @@
 .menu-mobile.is-open .menu-mobile__menu {
   display: none;
 }
-.header-menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: $color-main;
-  width: 100%;
-  padding: 48px 40px;
+@media screen and (max-width: 767px) {
+  .header-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $color-main;
+    height: 100%;
+    width: 100%;
+    padding: 48px 40px;
+    z-index: 21;
 
-  display: none;
+    display: none;
 
-  &.is-open {
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-menu-container {
     display: flex;
+    align-items: center;
+  }
+}
+.navigation__link {
+  color: $color-title;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  transition: color $time-hover $cubic-for-all;
+  display: block;
+  letter-spacing: 0.02em;
+
+  &:focus,
+  &:hover {
+    color: $color-accent;
+  }
+  @media screen and (min-width: 768px) {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.142;
+    padding: 32px 0;
+  }
+}
+.contact__link {
+  color: $color-text;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.176;
+  display: block;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    line-height: 1.167;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation__list {
+  margin-bottom: 240px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    display: flex;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navigation__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact__item:last-child {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.contact {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 84px;
     flex-direction: column;
   }
 }
+.navigation__link--accent {
+  color: $color-accent;
+}
+@media screen and (min-width: 768px) {
+  .navigation__link--accent::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $color-accent;
+    border-radius: 2px;
+  }
+}
+.contact__icon {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+    fill: currentColor;
+    display: block;
+  }
+}
+.contact__link--accent {
+  @media screen and (max-width: 767px) {
+    color: $color-accent;
+    font-size: 34px;
+  }
+}
+
 .social-list__menu {
   display: flex;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .social-list__item {
   display: flex;
@@ -73,78 +197,4 @@
   width: 22px;
   height: 2px;
   transform: rotate(90deg);
-}
-
-.navigation__link {
-  color: $color-title;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.175;
-  transition: color $time-hover $cubic-for-all;
-  display: block;
-  margin-bottom: 20px;
-  letter-spacing: 0.02em;
-
-  &:focus,
-  &:hover {
-    color: $color-accent;
-  }
-}
-.contact__link {
-  color: $color-text;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.176;
-  display: block;
-  letter-spacing: 0.02em;
-
-  &:hover,
-  &:focus {
-    color: $color-accent;
-  }
-}
-.navigation__list {
-  margin-bottom: 240px;
-}
-.navigation__item:not(:last-child) {
-  margin-bottom: 32px;
-}
-
-.contact__item:last-child {
-  margin-bottom: 32px;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column-reverse;
-  margin-bottom: 64px;
-}
-.navigation__link--accent {
-  color: $color-accent;
-  @media screen and (min-width: 768px) {
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background-color: $color-accent;
-      border-radius: 2px;
-    }
-  }
-}
-.contact__icon {
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    margin-right: 10px;
-    fill: currentColor;
-    display: block;
-  }
-}
-.contact__link--accent {
-  color: $color-accent;
-  font-size: 34px;
 }
