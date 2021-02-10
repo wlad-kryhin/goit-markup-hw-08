@@ -1,10 +1,10 @@
 .page-footer {
   background-color: $color-footer;
-  letter-spacing: 0.03em;
   padding-bottom: 60px;
   padding-top: 60px;
 
   & .container {
+    text-align: center;
   }
 }
 .adres__item:not(:last-child) {
@@ -14,11 +14,13 @@
   font-size: 14px;
   line-height: 1.8;
   font-weight: 400;
+  letter-spacing: 0.03em;
 }
-.container-adres {
+.container-adres,
+.footer-icons {
+  margin-bottom: 60px;
 }
 .footer-form {
-  margin-left: auto;
 }
 .adres__city {
   color: rgba(255, 255, 255, 1);
@@ -41,7 +43,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $color-main;
-  display: block;
+  margin-bottom: 20px;
 }
 .icon-list {
   list-style: none;

@@ -1,10 +1,13 @@
 .about {
-  padding: 50px 0;
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
 .about__list {
 }
+
 .about__item {
+  max-width: 480px;
   &:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -12,15 +15,15 @@
 .about__subtitle {
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.142;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .about__text {
   color: $color-text;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.714;
   font-weight: 400;
   letter-spacing: 0.03em;
 }
@@ -31,7 +34,7 @@
   align-items: center;
   width: 100%;
   height: 120px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .about__icon {
   height: 70px;
