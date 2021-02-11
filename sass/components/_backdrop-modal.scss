@@ -92,7 +92,7 @@
 
   &:focus,
   &:hover {
-    border: 1px solid $color-accent;
+    outline-color: $color-accent;
   }
 }
 .modal__input:focus + .modal__icon,
@@ -193,6 +193,6 @@
   transition: border $time-hover $cubic-for-all;
 
   &:hover {
-    border: 1px solid $color-accent;
+    outline-color: $color-accent;
   }
 }

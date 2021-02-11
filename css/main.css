@@ -1106,7 +1106,7 @@ img {
 }
 
 .modal__input:focus, .modal__input:hover {
-  border: 1px solid #2196f3;
+  outline-color: #2196f3;
 }
 
 .modal__input:focus + .modal__icon,
@@ -1228,6 +1228,6 @@ img {
 }
 
 .modal__textarea:hover {
-  border: 1px solid #2196f3;
+  outline-color: #2196f3;
 }
 /*# sourceMappingURL=main.css.map */
