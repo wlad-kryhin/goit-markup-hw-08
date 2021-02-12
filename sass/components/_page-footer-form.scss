@@ -10,8 +10,14 @@
   transition: border $time-hover $cubic-for-all;
   margin-bottom: 20px;
 
-  &:hover {
+  &:focus {
+    outline: none;
     border: 1px solid $color-accent;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
   }
 }
 .footer-form__icon {
@@ -19,6 +25,11 @@
   height: 100%;
 }
 .footer-form__container {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .footer-form__label {
   width: 24px;

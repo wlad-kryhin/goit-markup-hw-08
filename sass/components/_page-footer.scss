@@ -4,7 +4,21 @@
   padding-top: 60px;
 
   & .container {
-    text-align: center;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+  }
+}
+.page-footer .container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
 .adres__item:not(:last-child) {
@@ -18,7 +32,9 @@
 }
 .container-adres,
 .footer-icons {
-  margin-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 .footer-form {
 }

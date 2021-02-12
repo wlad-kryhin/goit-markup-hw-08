@@ -2,6 +2,10 @@
   background-color: $color-background;
   padding-bottom: 60px;
   padding-top: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 .advantages__name {
   color: $color-title;
@@ -31,8 +35,11 @@
   }
 
   @media screen and (min-width: 768px) {
-    width: 354px;
+    width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 4 * 30px) / 4);
   }
 }
 .advantages__images {

@@ -34,6 +34,10 @@
     transform: translate(-50%, -50%) scale(0.5);
     opacity: 0;
   }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 580px;
+  }
 }
 .modal__close {
   position: absolute;
@@ -70,6 +74,7 @@
     line-height: 1.167;
     letter-spacing: 0.01em;
     margin-bottom: 4px;
+    color: $color-text;
   }
 }
 .modal__title {
@@ -117,6 +122,10 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 .modal__link--accept {
   color: $color-accent;
@@ -194,5 +203,14 @@
   &:focus {
     outline: none;
     border: 1px solid $color-accent;
+  }
+  &::placeholder {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
   }
 }
