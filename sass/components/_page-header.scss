@@ -81,30 +81,6 @@
     padding: 32px 0;
   }
 }
-.contact__link {
-  color: $color-text;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.176;
-  display: block;
-  letter-spacing: 0.02em;
-
-  &:hover,
-  &:focus {
-    color: $color-accent;
-  }
-  @media screen and (min-width: 768px) {
-    font-size: 12px;
-    line-height: 1.167;
-    display: flex;
-    align-items: center;
-  }
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.142;
-  }
-}
-
 .navigation__list {
   margin-bottom: 240px;
   @media screen and (min-width: 768px) {
@@ -120,45 +96,15 @@
     margin-bottom: 32px;
   }
 }
-@media screen and (max-width: 767px) {
-  .contact__item:last-child {
-    margin-bottom: 32px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contact__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contact__item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
 @media screen and (min-width: 768px) {
   .navigation__item:not(:last-child) {
     margin-right: 50px;
   }
 }
-.contact {
-  display: flex;
-
-  @media screen and (max-width: 767px) {
-    flex-direction: column-reverse;
-    margin-bottom: 64px;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-left: 84px;
-    flex-direction: column;
-  }
-  @media screen and (min-width: 1200px) {
-    flex-direction: row;
-  }
-}
 .navigation__link--accent {
   color: $color-accent;
 }
+
 @media screen and (min-width: 768px) {
   .navigation__link--accent::after {
     content: "";
@@ -170,24 +116,10 @@
     height: 4px;
     background-color: $color-accent;
     border-radius: 2px;
+    transform: scaleX(1);
+    transition: transform $time-hover $cubic-for-all;
   }
 }
-.contact__icon {
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    margin-right: 10px;
-    fill: currentColor;
-    display: block;
-  }
-}
-.contact__link--accent {
-  @media screen and (max-width: 767px) {
-    color: $color-accent;
-    font-size: 34px;
-  }
-}
-
 .social-list__menu {
   display: flex;
   align-items: center;

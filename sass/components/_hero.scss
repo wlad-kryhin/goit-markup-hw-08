@@ -1,5 +1,5 @@
 /* ============= HERO =========*/
-.hero {
+.page-hero {
   background-color: $color-footer;
   text-align: center;
   padding-top: 118px;
@@ -65,7 +65,6 @@
     }
   }
 }
-
 .hero__title {
   color: $color-main;
   font-weight: 900;
@@ -74,26 +73,13 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: center;
-
+  margin: 0 auto;
+  max-width: 360px;
   margin-bottom: 30px;
 
   @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 1.364;
+    max-width: 700px;
   }
-}
-.hero__button {
-  color: $color-main;
-  background-color: $color-accent;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  cursor: pointer;
-
-  border-radius: 4px;
-  padding: 10px 32px;
-  min-width: 200px;
-  border-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

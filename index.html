@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <!-- Шапка страницы-->
+    <!---- Шапка страницы ----->
     <header class="page-header">
         <div class="container">
             <nav class="navigation">
@@ -80,12 +80,12 @@
 
     <!-- HERO -->
     <main>
-        <section class="hero">
+        <section class="page-hero">
             <div class="container">
-                <h1 class="hero__title">Эффективные решения</br>
-                    для вашего бизнеса</br>
+                <h1 class="hero__title">Эффективные решения
+                    для вашего бизнеса
                 </h1>
-                <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
+                <button class="web-button" type="button" data-modal-open>Заказать услугу</button>
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
                         <form class="modal__form">
@@ -122,8 +122,12 @@
                                     <span class="modal__figure"></span>Соглашаюсь с рассылкой и принимаю <a href="/"
                                         class="modal__link--accept">Условия договора</a></label>
                             </div>
-                            <button class="modal__close" type="button" data-modal-close>&#10006;</button>
-                            <button type="submit" class="modal__submit">Отправить</button>
+                            <button class="modal__close" type="button" data-modal-close>
+                                <svg class="menu-mobile__icon">
+                                    <use href="../img/symbol-defs.svg#close"></use>
+                                </svg>
+                            </button>
+                            <button type="submit" class="web-button">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -189,8 +193,7 @@
                          srcset="./img/First1x.jpg 1x , ./img/first2x.jpg 2x"
                          src="./img/First1x.jpg" 
                          alt="Десктопные приложения" 
-                         width="370"
-                          height="294">
+                         width="370">
                         <div class="services__text--position">
                             <p class="services__text">Десктопные приложения</p>
                         </div>
@@ -200,7 +203,7 @@
                         srcset="./img/second1x.jpg 1x, ./img/second2x.jpg 2x"
                          src="./img/second1x.jpg" 
                          alt="Мобильные приложения"
-                          width="370" height="294px">
+                          width="370">
                         <div class="services__text--position">
                             <p class="services__text">Мобильные приложения</p>
                         </div>
@@ -210,7 +213,7 @@
                         srcset="./img/third1x.jpg 1x, ./img/third2x.jpg 2x"
                          src="./img/third1x.jpg" 
                          alt="Дизайнерские решения"
-                          width="370" height="294px">
+                          width="370">
                         <div class="services__text--position">
                             <p class="services__text">Дизайнерские решения</p>
                         </div>
@@ -224,8 +227,12 @@
                 <h2 class="title">Наша Команда</h2>
                 <ul class="advantages_list">
                     <li class="advantages__item">
-                        <img class="advantages__images" 
-                        src="./img/igor.jpg" alt="Игорь" width="270">
+                        <picture>
+                            <source srcset="./img/IgorMobile.jpg 1x, ./img/IgorMobile2.jpg 2x" type="image" media="(min-width: 480px)">
+                                <source srcset="./img/IgorTablet.jpg 1x, ./img/IgorTablet2.jpg 2x" type="image" media="(min-width: 768px)">
+                                    <source srcset="./img/IgorDesktop.jpg 1x, ./img/IgorDesktop2.jpg 2x" type="image" media="(min-width: 1200px)">
+                            <img class="advantages__images" src="./img/IgorMobile.jpg" alt="Игорь" width="450">
+                        </picture>
                         <div class="advantages__wrapper--icon">
                             <h3 class="advantages__name">Игорь Демьяненко</h3>
                             <p lang="en" class="advantages__position">Product Designer</p>
@@ -482,7 +489,7 @@
                 <h3 class="footer-subtitle">Подпишитесь на рассылку</h3>
                 <form class="footer-form__container">
                     <input type="email" placeholder="E-mail" name="mail" class="footer-form__input">
-                    <button type="submit" class="modal__submit">Подписаться <span class="footer-form__label">
+                    <button type="submit" class="web-button">Подписаться <span class="footer-form__label">
                             <svg class="footer-form__icon">
                                 <use href="./img/symbol-defs.svg#icon-send"></use>
                             </svg>
