@@ -269,8 +269,12 @@
                         </div>
                     </li>
                     <li class="advantages__item">
-                        <img class="advantages__images" srcset="./img/bigOlga.jpg 1x, ./img/bigOlgax2.jpg 2x" 
-                        src="./img/bigOlga.jpg" alt="Ольга" width="270">
+                        <picture>
+                            <source srcset="./img/olgamobile.jpg 1x, ./img/olgamobilex2.jpg 2x" type="image/jpg" media="(min-width: 480px)">
+                            <source srcset="./img/olgatablet.jpg 1x, ./img/olgatabletx2.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+                            <source srcset="./img/olgadesktop.jpg 1x, ./img/olgadesktopx2.jpg 2x" type="image/jpg" media="(min-width: 1200px)">
+                            <img class="advantages__images" src="./img/olgamobile.jpg" alt="Ольга" width="450">
+                        </picture>
                         <div class="advantages__wrapper--icon">
                             <h3 class="advantages__name">Ольга Репина</h3>
                             <p lang="en" class="advantages__position">Frontend Developer</p>
@@ -307,7 +311,12 @@
                         </div>
                     </li>
                     <li class="advantages__item">
-                        <img class="advantages__images" src="./img/imgNikolaj.jpg" alt="3" width="270">
+                        <picture>
+                            <source srcset="./img/nikolaymobile.jpg 1x, ./img/nikolaymobilex2.jpg 2x" type="image/jpg" media="(min-width: 480px)">
+                            <source srcset="./img/nikolaytablet.jpg 1x, ./img/nikolaytabletx2.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+                            <source srcset="./img/nikolaydesktop.jpg 1x, ./img/nikolaydesktopx2.jpg 2x" type="image/jpg" media="(min-width: 1200px)">
+                            <img class="advantages__images" src="./img/nikolaymobile.jpg" alt="Николай" width="450">
+                        </picture>
                         <div class="advantages__wrapper--icon">
                             <h3 class="advantages__name">Николай Тарасов</h3>
                             <p lang="en" class="advantages__position">Marketing</p>
@@ -344,7 +353,15 @@
                         </div>
                         </li>
                     <li class="advantages__item">
-                        <img class="advantages__images" src="./img/imgMichal.jpg" alt="4" width="270">
+                        <picture>
+                            <source srcset="./img/michalmobile.jpg 1x, ./img/michalmobilex2.jpg 2x" type="image/jpg"
+                                media="(min-width: 480px)">
+                            <source srcset="./img/michaltablet.jpg 1x, ./img/michaltabletx2.jpg 2x" type="image/jpg"
+                                media="(min-width: 768px)">
+                            <source srcset="./img/michaldesktop.jpg 1x, ./img/michaldesktopx2.jpg 2x" type="image/jpg"
+                                media="(min-width: 1200px)">
+                            <img class="advantages__images" src="./img/michalmobile.jpg" alt="Михаил" width="450">
+                        </picture>
                         <div class="advantages__wrapper--icon">
                             <h3 class="advantages__name">Михаил Ермаков</h3>
                             <p lang="en" class="advantages__position">UI Designer</p>
