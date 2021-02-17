@@ -37,9 +37,12 @@
   background-color: $color-main;
   outline: 1px solid #eeeeee;
   text-align: start;
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
+
   @media screen and (min-width: 768px) {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
