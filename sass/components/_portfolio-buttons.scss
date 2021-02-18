@@ -37,11 +37,11 @@
     margin-bottom: 50px;
   }
 }
-.list-buttons:not(:last-child) {
-  margin-right: 8px;
-}
-@media screen and (max-width: 767px) {
-  .list-buttons:nth-child(-n + 2) {
+.list-buttons {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @media screen and (max-width: 767px) {
     margin-bottom: 15px;
   }
 }

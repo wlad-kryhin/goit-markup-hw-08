@@ -25,9 +25,13 @@
   }
 }
 .portfolio-picture {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 .advantages-container-carts {
   padding: 20px 24px;
@@ -37,6 +41,7 @@
   background-color: $color-main;
   outline: 1px solid #eeeeee;
   text-align: start;
+  max-width: 450px;
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 30px;
