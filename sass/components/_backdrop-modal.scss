@@ -22,21 +22,21 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform $time-hover $cubic-for-all;
-  width: 450px;
-  height: 610px;
   background-color: $color-main;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   opacity: 1;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 530px;
+  }
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0.5);
     opacity: 0;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 528px;
-    height: 580px;
   }
 }
 .modal__form {
@@ -67,6 +67,9 @@
   letter-spacing: 0.03em;
   color: $color-title;
   margin-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 .modal__input {
   width: 100%;
@@ -100,10 +103,13 @@
   line-height: 1.167;
   letter-spacing: 0.03em;
   color: $color-text;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.714;
