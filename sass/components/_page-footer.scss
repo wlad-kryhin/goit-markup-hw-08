@@ -14,15 +14,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: baseline;
   }
   @media screen and (min-width: 1200px) {
-    align-items: baseline;
     justify-content: space-between;
   }
 }
-.adres__item:not(:last-child) {
-  margin-bottom: 9px;
+.adres__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 .adres {
   font-size: 14px;
@@ -35,8 +36,6 @@
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
   }
-}
-.footer-form {
 }
 .adres__city {
   color: rgba(255, 255, 255, 1);
