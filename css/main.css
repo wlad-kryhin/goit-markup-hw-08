@@ -38,6 +38,18 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .container {
   padding: 0 15px;
   margin: 0 auto;
@@ -61,16 +73,37 @@ img {
   }
 }
 
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
+@media screen and (min-width: 768px) {
+  .page-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer .container {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .page-footer .container {
+    text-align: center;
+  }
+}
+
+.section-padding {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-padding {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .title {
@@ -403,6 +436,13 @@ img {
   font-family: inherit;
 }
 
+.footer-form .web-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .modal__close {
   position: absolute;
   top: 8px;
@@ -540,18 +580,6 @@ img {
   }
 }
 
-.about {
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .about {
-    padding-bottom: 94px;
-    padding-top: 94px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .about__list {
     display: flex;
@@ -668,15 +696,6 @@ img {
 
 .advantages {
   background-color: #f5f4fa;
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .advantages {
-    padding-bottom: 94px;
-    padding-top: 94px;
-  }
 }
 
 .advantages__name {
@@ -742,18 +761,6 @@ img {
   padding: 24px;
 }
 
-.partners {
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .partners {
-    padding-bottom: 94px;
-    padding-top: 94px;
-  }
-}
-
 .partners__item {
   width: calc((100% - 2 * 30px) / 2);
   height: 90px;
@@ -804,27 +811,6 @@ img {
   background-color: #2f303a;
   padding-bottom: 60px;
   padding-top: 60px;
-}
-
-@media screen and (max-width: 1199px) {
-  .page-footer .container {
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .page-footer .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .page-footer .container {
-    justify-content: space-between;
-  }
 }
 
 .adres__item:not(:last-child) {
@@ -926,13 +912,6 @@ img {
   margin-left: 10px;
 }
 
-.footer-form .web-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
 .modal-buttons {
   color: #212121;
   background-color: #f5f4fa;
@@ -1013,15 +992,6 @@ img {
 .portfolio-selection {
   background-color: #ffffff;
   border-top: 1px solid #ececec;
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .portfolio-selection {
-    padding-bottom: 94px;
-    padding-top: 94px;
-  }
 }
 
 .portfolio-picture {

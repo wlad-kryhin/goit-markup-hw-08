@@ -21,19 +21,22 @@
     line-height: 1.142;
   }
 }
-@media screen and (max-width: 767px) {
-  .contact__item:last-child {
-    margin-bottom: 32px;
+
+.contact__item {
+  @media screen and (max-width: 767px) {
+    &:last-child {
+      margin-bottom: 32px;
+    }
   }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contact__item:not(:last-child) {
-    margin-bottom: 10px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
-}
-@media screen and (min-width: 1200px) {
-  .contact__item:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 .contact {

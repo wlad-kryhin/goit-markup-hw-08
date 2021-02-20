@@ -17,12 +17,6 @@
 .portfolio-selection {
   background-color: $color-main;
   border-top: 1px solid #ececec;
-  padding-bottom: 60px;
-  padding-top: 60px;
-  @media screen and (min-width: 1200px) {
-    padding-bottom: 94px;
-    padding-top: 94px;
-  }
 }
 .portfolio-picture {
   margin: 0 auto;
