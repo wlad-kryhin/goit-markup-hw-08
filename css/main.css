@@ -51,13 +51,18 @@ img {
 }
 
 .container {
+  width: 100%;
   padding: 0 15px;
-  margin: 0 auto;
+}
+
+.page-header .container {
+  display: flex;
 }
 
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
+    margin: 0 auto;
   }
 }
 
@@ -97,6 +102,8 @@ img {
 .section-padding {
   padding-bottom: 60px;
   padding-top: 60px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 1200px) {
@@ -129,8 +136,14 @@ img {
 }
 
 .navigation {
-  display: flex;
-  align-items: center;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .menu-mobile {
@@ -141,7 +154,6 @@ img {
   background-color: transparent;
   margin-left: auto;
   position: relative;
-  z-index: 22;
 }
 
 .menu-mobile:hover .menu-mobile__icon,
@@ -153,6 +165,21 @@ img {
   .menu-mobile {
     display: none;
   }
+}
+
+.close-menu-btn {
+  position: fixed;
+  right: 8px;
+  top: 8px;
+  background-color: transparent;
+  border: none;
+  color: #212121;
+}
+
+.icon-close-btn {
+  fill: currentColor;
+  width: 40px;
+  height: 40px;
 }
 
 .menu-mobile__icon {
@@ -175,34 +202,34 @@ img {
   .header-menu-container {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #ffffff;
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    max-width: 480px;
     padding: 48px 40px;
     z-index: 21;
     overflow: auto;
-    display: none;
+    transform: translateY(-100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header-menu-container.is-open {
-    display: flex;
-    flex-direction: column;
+    transform: translateY(0);
   }
 }
 
 @media screen and (min-width: 768px) {
   .header-menu-container {
-    display: flex;
-    align-items: center;
+    display: none;
   }
 }
 
 .navigation__link {
   color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   font-size: 40px;
   line-height: 1.175;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   letter-spacing: 0.02em;
 }
@@ -218,10 +245,6 @@ img {
     line-height: 1.142;
     padding: 32px 0;
   }
-}
-
-.navigation__list {
-  margin-bottom: 240px;
 }
 
 @media screen and (min-width: 768px) {
@@ -328,6 +351,7 @@ img {
   .contact__link {
     font-size: 14px;
     line-height: 1.142;
+    padding: 32px 0;
   }
 }
 
