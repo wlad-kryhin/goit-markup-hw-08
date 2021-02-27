@@ -1,14 +1,18 @@
 .contact__link {
   color: $color-text;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 1.176;
+  font-size: 18px;
+  line-height: 1;
   display: block;
   letter-spacing: 0.02em;
 
   &:hover,
   &:focus {
     color: $color-accent;
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+    line-height: 1.176;
   }
   @media screen and (min-width: 768px) {
     font-size: 12px;
@@ -45,7 +49,7 @@
 
   @media screen and (max-width: 767px) {
     flex-direction: column-reverse;
-    margin-bottom: 64px;
+    margin-bottom: 20px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -67,6 +71,9 @@
 }
 .contact__link--accent {
   @media screen and (max-width: 767px) {
+    color: $color-accent;
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     color: $color-accent;
     font-size: 34px;
   }

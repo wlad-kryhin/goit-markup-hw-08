@@ -14,62 +14,90 @@
 
 <body>
     <!-- Шапка страницы-->
-    <header class="page-header">
-        <div class="container">
-            <nav class="navigation">
-            <a href="./index.html" class="logo">Web<span class="logo__themelabel">Studio</span></a>
-            <button class="menu-mobile" type="button" artia-controls="header-menu-container" aria-expanded="false" data-menu-button>
-                <svg class="menu-mobile__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
-                    <use class="menu-mobile__menu" href="./img/symbol-defs.svg#menu"></use>
-                    <use class="menu-mobile__close" href="./img/symbol-defs.svg#close"></use>
+<header class="page-header">
+    <div class="container">
+        <a href="./index.html" class="logo">Web<span class="logo__themelabel">Studio</span></a>
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="./index.html" class="navigation__link">Студия</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./portfolio.html" class="navigation__link navigation__link--accent">Портфолио</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="/" class="navigation__link">Контакты</a>
+                </li>
+            </ul>
+            <ul class="contact">
+                <li class="contact__item"><a href="maito:info@devstudio.com" class="contact__link">
+                        <svg class="contact__icon" width="14" height="10">
+                            <use href="./img/symbol-defs.svg#ienvelope"></use>
+                        </svg>info@devstudio.com</a>
+                </li>
+                <li class="contact__item"><a href="tell:+380961111111" class="contact__link contact__link--accent">
+                        <svg class="contact__icon" width="10" height="14">
+                            <use href="./img/symbol-defs.svg#smartphone"></use>
+                        </svg>+380 96 111 11 11</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="menu-mobile" type="button" artia-controls="header-menu-container" aria-expanded="false"
+            data-menu-button>
+            <svg class="menu-mobile__icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="menu-mobile__menu" href="./img/symbol-defs.svg#menu"></use>
+            </svg>
+        </button>
+        <div class="header-menu-container" data-menu>
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="./index.html" class="navigation__link">Студия</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="./portfolio.html" class="navigation__link navigation__link--accent">Портфолио</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="/" class="navigation__link">Контакты</a>
+                </li>
+            </ul>
+            <ul class="contact">
+                <li class="contact__item"><a href="maito:info@devstudio.com" class="contact__link">
+                        <svg class="contact__icon" width="14" height="10">
+                            <use href="./img/symbol-defs.svg#ienvelope"></use>
+                        </svg>info@devstudio.com</a>
+                </li>
+                <li class="contact__item"><a href="tell:+380961111111" class="contact__link contact__link--accent">
+                        <svg class="contact__icon" width="10" height="14">
+                            <use href="./img/symbol-defs.svg#smartphone"></use>
+                        </svg>+380 96 111 11 11</a>
+                </li>
+            </ul>
+            <ul class="social-list__menu">
+                <li class="social-list__item">
+                    <a href="" class="social-list__links">Instagram</a>
+                    <span class="social-list__line"></span>
+                </li>
+                <li class="social-list__item">
+                    <a href="" class="social-list__links">Twitter</a>
+                    <span class="social-list__line"></span>
+                </li>
+                <li class="social-list__item">
+                    <a href="" class="social-list__links">Facebook</a>
+                    <span class="social-list__line"></span>
+                </li>
+                <li class="social-list__item">
+                    <a href="" class="social-list__links">LinkedIn</a>
+                </li>
+            </ul>
+            <button class="close-menu-btn" data-menu-close>
+                <svg class="icon-close-btn">
+                    <use href="./img/symbol-defs.svg#close"></use>
                 </svg>
             </button>
-            <div class="header-menu-container" id="header-menu-container" data-menu>
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a href="./index.html" class="navigation__link">Студия</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="./portfolio.html" class="navigation__link navigation__link--accent">Портфолио</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="/" class="navigation__link">Контакты</a>
-                    </li>
-                </ul>
-                <ul class="contact">
-                    <li class="contact__item"><a href="maito:info@devstudio.com" class="contact__link">
-                            <svg class="contact__icon" width="16" height="12">
-                                <use href="./img/symbol-defs.svg#ienvelope"></use>
-                            </svg>info@devstudio.com</a>
-                    </li>
-                    <li class="contact__item"><a href="tell:+380961111111" class="contact__link contact__link--accent">
-                            <svg class="contact__icon" width="10" height="16">
-                                <use href="./img/symbol-defs.svg#smartphone"></use>
-                            </svg>+380 96 111 11 11</a>
-                    </li>
-                </ul>
-                <ul class="social-list__menu">
-                    <li class="social-list__item">
-                        <a href="" class="social-list__links">Instagram</a>
-                        <span class="social-list__line"></span>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="" class="social-list__links">Twitter</a>
-                        <span class="social-list__line"></span>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="" class="social-list__links">Facebook</a>
-                        <span class="social-list__line"></span>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="" class="social-list__links">LinkedIn</a>
-                    </li>
-                </ul>
-            </div>
-            </nav>
-            
-            </div>
-            </header>
+        </div>
+    </div>
+</header>
+
 <!-- ХИРО-->
 <main>
     <section class="portfolio-selection section-padding">
