@@ -31,17 +31,21 @@
   justify-content: center;
   align-items: center;
 
-  background-color: $color-main;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 30px;
   height: 30px;
-  fill: $color-title;
+  color: $color-title;
   border-radius: 50%;
   cursor: pointer;
-  transition: color $time-hover $cubic-for-all;
-
-  &:hover,
-  &:focus {
-    color: $color-accent;
+}
+.modal-close-icon {
+  height: 100%;
+  width: 100%;
+  fill: currentColor;
+  transition: fill $time-hover $cubic-for-all;
+  .modal__close:hover &,
+  .modal__close:focus & {
+    fill: $color-accent;
   }
 }
